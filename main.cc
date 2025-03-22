@@ -3,6 +3,9 @@
 
 int main(int argc, char const *argv[])
 {
-    std::cout<<"Luaconfig"<<std::endl; 
+    std::string file="../config.lua";
+    std::cout<<file<<std::endl; 
+    auto config= new LuaConfig(file);
+    
     return 0;
 }
