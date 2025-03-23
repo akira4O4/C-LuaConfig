@@ -23,18 +23,18 @@ sudo apt install lua5.3
 ### 2.Edit your ```config.lua```
 
 ```lua
-name="C-LuaConfig"
+name="Akira"
 
 config = {
     window = {
-        width = 1280,
-        height = 720,
+        width = 1920,
+        height = 1080,
     },
-    title = "My Application",
-    fullscreen = false,
+    title = "C-LuaConfig",
+    enable = false,
     colors = {
-        background = {0.1, 0.2, 0.3},
-        text = {1.0, 2.0, 3.0},
+        rgb = {1, 2, 3},
+        rgba= {1.1, 2.2, 3.3,4.4},
     },
 }
 ```
@@ -53,15 +53,17 @@ int main(int argc, char const *argv[])
     auto width = config->get<int>("config.window.width");
     auto height = config->get<int>("config.window.height");
     auto title = config->get<std::string>("config.title");
-    auto fullscreen = config->get<bool>("config.fullscreen");
-    auto rgb0 = config->get<float>("config.colors.background[0]");
+    auto enable = config->get<bool>("config.enable");
+    auto rgb0 = config->get<int>("config.colors.rgb[0]");
+    auto rgba1 = config->get<float>("config.colors.rgba[1]");
 
     std::cout << name << std::endl;
     std::cout << width << std::endl;
     std::cout << height << std::endl;
     std::cout << title << std::endl;
-    std::cout << fullscreen << std::endl;
+    std::cout << enable << std::endl;
     std::cout << rgb0 << std::endl;
+    std::cout << rgba1 << std::endl;
 
     return 0;
 }
