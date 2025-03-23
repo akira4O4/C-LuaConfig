@@ -20,7 +20,6 @@ public:
     T get(const std::string &key);
 
 private:
-    std::string m_file;
     lua_State *m_L{nullptr};
 
 private:

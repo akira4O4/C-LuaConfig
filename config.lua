@@ -1,16 +1,16 @@
 -- config.lua
 
-name="Easy CLuaConfig"
+name="Akira"
 
 config = {
     window = {
-        width = 1280,
-        height = 720,
+        width = 1920,
+        height = 1080,
     },
-    title = "My Application",
-    fullscreen = false,
+    title = "C-LuaConfig",
+    enable = false,
     colors = {
-        background = {0.1, 0.2, 0.3},
-        text = {1.0, 2.0, 3.0},
+        rgb = {1, 2, 3},
+        rgba= {1.1, 2.2, 3.3,4.4},
     },
 }
